@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SchoolRegistration</name>
+    </assembly>
+    <members>
+        <member name="P:SchoolRegistration.Models.People.Id">
+            <summary>
+            Auto generated number
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.People.FirstName">
+            <summary>
+            This is required.
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.People.LastName">
+            <summary>
+            This is required.
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.People.BirthDate">
+            <summary>
+            To set the birth date of the student
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.People.Age">
+            <summary>
+            Identify the age of the person
+            </summary>
+        </member>
+        <member name="T:SchoolRegistration.Models.Student">
+            <summary>
+            Student Model
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Student.StudentIDNumber">
+            <summary>
+            Student ID number is required.
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Student.Adviser">
+            <summary>
+            Teacher ID to set the teacher of this student
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Student.OldGPA">
+            <summary>
+            To identify the old GPA 
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Student.IsStarSection">
+            <summary>
+            To identify if this student belong to star section
+            </summary>
+        </member>
+        <member name="T:SchoolRegistration.Models.Teacher">
+            <summary>
+            Teacher Model
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Teacher.TeacherIDNumber">
+            <summary>
+            Required. To identifiy the teacher id number
+            </summary>
+        </member>
+        <member name="P:SchoolRegistration.Models.Teacher.IsStarSectionAdviser">
+            <summary>
+            To identify if the teacher is a star section adviser
+            </summary>
+        </member>
+        <member name="T:SchoolRegistration.Repository.StudentRepository">
+            <summary>
+            Student Repository
+            </summary>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.Add(SchoolRegistration.Models.Student)">
+            <summary>
+            Add Student
+            </summary>
+            <param name="entity">the data to be added</param>
+            <returns>newly created student</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.Delete(System.Int32)">
+            <summary>
+            Delete the student using id
+            </summary>
+            <param name="id">the id of the student to be deleted</param>
+            <returns>The id of the deleted student</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.GetAll">
+            <summary>
+            Get the list of all students
+            </summary>
+            <returns>List of students</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.GetStudentsInStarSection">
+            <summary>
+            Get the list of all students
+            </summary>
+            <returns>List of students</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.GetById(System.Int32)">
+            <summary>
+            Get the student by id
+            </summary>
+            <param name="id">The id to be fetch on the data file</param>
+            <returns>The requested student record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.GetByStudentNumber(System.Int32)">
+            <summary>
+            Get the student by student number
+            </summary>
+            <param name="StudentNumber">The student id number</param>
+            <returns>The requested student record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.GetByName(System.String)">
+            <summary>
+            Get the student by name
+            </summary>
+            <param name="name">The name to be fetch on the data file</param>
+            <returns>The requested student record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.Update(System.Int32,SchoolRegistration.Models.Student)">
+            <summary>
+            update the student record
+            </summary>
+            <param name="id">The id to be fetch on the data file</param>
+            <param name="entity">The data to be updated</param>
+            <returns>The requested student record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.StudentRepository.IsQualifiedForStarSection(SchoolRegistration.Models.Student)">
+            <summary>
+            Check if the grade is qualified for star section
+            </summary>
+            <param name="entity"></param>
+            <returns>True or False</returns>
+        </member>
+        <member name="T:SchoolRegistration.Repository.TeacherRepository">
+            <summary>
+            Teacher Repository 
+            </summary>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.Add(SchoolRegistration.Models.Teacher)">
+            <summary>
+            Add Teacher
+            </summary>
+            <param name="entity">the data to be added</param>
+            <returns>newly created teacher</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.Delete(System.Int32)">
+            <summary>
+            Delete the teacher using id
+            </summary>
+            <param name="id">the id of the teacher to be deleted</param>
+            <returns>The id of the deleted teacher</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.GetAll">
+            <summary>
+            Get the list of all teachers
+            </summary>
+            <returns>List of teachers</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.GetById(System.Int32)">
+            <summary>
+            Get the teacher by id
+            </summary>
+            <param name="id">The id to be fetch on the data file</param>
+            <returns>The requested teacher record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.GetByTeacherNumber(System.Int32)">
+            <summary>
+            Get the teacher by teacher number
+            </summary>
+            <param name="TeacherNumber">The teacher id number</param>
+            <returns>The requested teacher record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.GetByName(System.String)">
+            <summary>
+            Get the teacher by name
+            </summary>
+            <param name="name">The name to be fetch on the data file</param>
+            <returns>The requested teacher record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.Update(System.Int32,SchoolRegistration.Models.Teacher)">
+            <summary>
+            update the teacher record
+            </summary>
+            <param name="id">The id to be fetch on the data file</param>
+            <param name="entity">The data to be updated</param>
+            <returns>The requested teacher record</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.MaxTeacherCount">
+            <summary>
+            Get the max teacher count
+            </summary>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:SchoolRegistration.Repository.TeacherRepository.GetStarSectionAdviserId">
+            <summary>
+            Get the teacher id of the star section adviser
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
